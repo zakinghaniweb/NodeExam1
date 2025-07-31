@@ -21,6 +21,6 @@ const uploadController = async(req,res)=>{
     fs.unlink(req.file.path, (err)=>{
         if (err) return console.log(err)
     })
-    res.status(200).send(uploadResult.url)
+    res.status(200).send(`Image has been hosted: ${uploadResult.url}`)
 }
 module.exports = uploadController
